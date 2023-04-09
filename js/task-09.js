@@ -14,3 +14,16 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+const refs = {
+  textColor: document.querySelector('.color'),
+  changeColorBtn: document.querySelector('.change-color'),
+};
+// console.log(refs.textColor);
+// console.log(refs.changeColorBtn);
+
+refs.changeColorBtn.addEventListener('click', onBcgColorEl);
+
+function onBcgColorEl() {
+  document.body.style.backgroundColor = getRandomHexColor();
+  refs.textColor.textContent = getRandomHexColor();
+}
