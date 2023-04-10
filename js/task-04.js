@@ -23,16 +23,16 @@ const incrementBtn = document.querySelector('[data-action="increment"]');
 const counterValueSpan = document.querySelector('#value');
 // console.log(counterValueSpan);
 
-decrementBtn.addEventListener('click', LogMessageDecr);
+decrementBtn.addEventListener('click', logMessageDecr);
 
-function LogMessageDecr() {
+function logMessageDecr() {
     counterValue += 1;
     counterValueSpan.textContent = counterValue;
 }
 
-incrementBtn.addEventListener('click', LogMessageIncr);
+incrementBtn.addEventListener('click', logMessageIncr);
 
-function LogMessageIncr() {
+function logMessageIncr() {
   counterValue -= 1;
   counterValueSpan.textContent = counterValue;
 }

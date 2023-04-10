@@ -24,25 +24,44 @@ const images = [
   },
 ];
 
-const imageGalaryEl = document.querySelector('.gallery');
+// const imageGalaryEl = document.querySelector('.gallery');
 
 // console.log(imageGalaryEl);
-const arrayItems = [];
+// const arrayItems = [];
 
-const imagesItems = images.forEach(image => {
-  const itemEl = document.createElement('li');
-  itemEl.classList.add('gallery__item');
-  // console.log(itemEl);
+// const imagesItems = images.forEach(image => {
+//   const itemEl = document.createElement('li');
+//   itemEl.classList.add('gallery__item');
+//   // console.log(itemEl);
 
-  const imageEl = document.createElement('img');
-  imageEl.classList.add('gallery__item-img');
-  imageEl.src = image.url;
-  imageEl.alt = image.alt;
-  imageEl.width = 360;
-  // console.log(imageEl);
-  itemEl.appendChild(imageEl);
-  arrayItems.push(itemEl);
-  // console.log(itemEl);
-});
+//   const imageEl = document.createElement('img');
+//   imageEl.classList.add('gallery__item-img');
+//   imageEl.src = image.url;
+//   imageEl.alt = image.alt;
+//   imageEl.width = 360;
+//   // console.log(imageEl);
+//   itemEl.appendChild(imageEl);
+//   arrayItems.push(itemEl);
+//   // console.log(itemEl);
+// });
 
-imageGalaryEl.append(...arrayItems);
+// imageGalaryEl.append(...arrayItems);
+const imageGalaryEl = document.querySelector('.gallery');
+
+const imagesItems = document.querySelector("ul");
+const element = images
+  .map(function ({ url, alt }) {
+
+    return `<li><img src = '${url}' alt = '${alt}' width="320"></li>`;
+  })
+  .join("");
+imagesItems.insertAdjacentHTML("afterbegin", element);
+
+imagesItems.style.cssText = 
+  `display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+  `;

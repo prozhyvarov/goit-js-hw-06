@@ -24,6 +24,7 @@ const refs = {
 refs.changeColorBtn.addEventListener('click', onBcgColorEl);
 
 function onBcgColorEl() {
-  document.body.style.backgroundColor = getRandomHexColor();
-  refs.textColor.textContent = getRandomHexColor();
+  const color = getRandomHexColor();
+  document.body.style.backgroundColor = color;
+  refs.textColor.textContent = color;
 }
