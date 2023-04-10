@@ -26,13 +26,13 @@ const counterValueSpan = document.querySelector('#value');
 decrementBtn.addEventListener('click', logMessageDecr);
 
 function logMessageDecr() {
-    counterValue += 1;
+    counterValue -= 1;
     counterValueSpan.textContent = counterValue;
 }
 
 incrementBtn.addEventListener('click', logMessageIncr);
 
 function logMessageIncr() {
-  counterValue -= 1;
+  counterValue += 1;
   counterValueSpan.textContent = counterValue;
 }
